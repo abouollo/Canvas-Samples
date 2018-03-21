@@ -1,0 +1,14 @@
+ <!--Canvas 1--> 
+  		<script type="text/javascript">
+
+		var canvas = document.createElement("canvas");
+		var context = canvas.getContext("2d");
+		
+		context.font = "18pt Arial";
+		context.fillText("I love InfoSec \ud83d\ude03", 20, 20);
+		document.body.appendChild(canvas);
+		var dataURL = canvas.toDataURL("image/png").substr("data:image/png;base64,".length);
+		document.getElementById("DataURL1").value = "" + dataURL;
+		document.getElementById("Hash1").value = "" + dataURL.hashCode();
+		</script>
+<!--End of Canvas 1--> 
