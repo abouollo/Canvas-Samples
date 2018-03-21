@@ -1,0 +1,23 @@
+<!--Canvas 2-->
+<script type="text/javascript">
+var canvas = document.createElement("canvas"),
+context = canvas.getContext("2d");
+canvas.height = 400;
+canvas.width = 700;
+
+context.lineJoin = "round";
+context.lineWidth = 60;
+
+context.strokeRect(75, 100, 130, 180);
+context.fillRect(250, 140, 160, 100);
+context.lineWidth = 20;
+context.strokeRect(450, 70, 60, 180);
+context.fillRect(490, 180, 80, 190);
+//document.body.appendChild(canvas);
+
+var dataURL = canvas.toDataURL("image/png").substr("data:image/png;base64,".length);
+document.getElementById("DataURL2").value = "" + dataURL;
+document.getElementById("Hash2").value = "" + dataURL.hashCode();
+
+</script>  
+<!--End of Canvas 2--> 
