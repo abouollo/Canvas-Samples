@@ -1,0 +1,35 @@
+<!--Canvas 8-->
+<script type="text/javascript">
+
+var canvas = document.createElement('canvas'),
+context = canvas.getContext('2d'),
+gradient1 = context.createLinearGradient(0, 0, 700, 0);
+canvas.height = 400;
+canvas.width = 700;
+
+gradient1.addColorStop(0, '#b0d5ff');
+gradient1.addColorStop(0.25, '#6d22b5');
+gradient1.addColorStop(0.5, '#676ba5');
+gradient1.addColorStop(0.7, '#a9eeab');
+gradient1.addColorStop(1, '#a38875');
+
+context.fillStyle = gradient1;
+context.strokeStyle = gradient1;
+context.rect(0, 0, 700, 400);
+
+context.lineJoin = "round";
+context.lineWidth = 60;
+context.strokeRect(75, 100, 130, 180);
+context.fillRect(250, 140, 160, 100);
+context.lineWidth = 20;
+context.strokeRect(450, 70, 60, 180);
+context.fillRect(490, 180, 80, 190);
+
+//document.body.appendChild(canvas);
+
+var dataURL = canvas.toDataURL("image/png").substr("data:image/png;base64,".length);
+document.getElementById("DataURL8").value = "" + dataURL;
+document.getElementById("Hash8").value = "" + dataURL.hashCode();
+
+</script>  
+<!--End of Canvas 8--> 
