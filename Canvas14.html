@@ -1,0 +1,17 @@
+<!--Canvas 14-->
+<script type="text/javascript">
+var canvas = document.createElement("canvas"),
+context = canvas.getContext("2d");
+canvas.height = 400;
+canvas.width = 700;
+
+context.font = "18pt Fake-Font-Name";
+context.fillText("abcdefghijklmnopqrstuvwxyz", 20, 30);
+context.fillText("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 20, 60);
+context.fillText("1234567890~!@#$%^&*()_+-={}|\/<>;:[]", 20, 90)
+//document.body.appendChild(canvas);
+var dataURL = canvas.toDataURL("image/png").substr("data:image/png;base64,".length);
+document.getElementById("DataURL14").value = "" + dataURL;
+document.getElementById("Hash14").value = "" + dataURL.hashCode();
+</script>  
+<!--End of Canvas 14--> 
