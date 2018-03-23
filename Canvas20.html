@@ -1,0 +1,57 @@
+<!--Canvas 20-->
+<script type="text/javascript">
+
+var canvas = document.createElement('canvas'),
+context = canvas.getContext('2d'),
+gradient = context.createLinearGradient(0, 0, 700, 0);
+canvas.height = 400;
+canvas.width = 700;
+
+context.shadowColor =  'rgba(64, 224, 208,0.6)';
+context.shadowOffsetX = 18;
+context.shadowOffsetY = -15;
+context.shadowBlur = 20;
+
+gradient.addColorStop(0, '#b0d5ff');
+gradient.addColorStop(0.25, '#6d22b5');
+gradient.addColorStop(0.5, '#676ba5');
+gradient.addColorStop(0.7, '#a9eeab');
+gradient.addColorStop(1, '#a38875');
+
+context.fillStyle = gradient;
+context.rect(0, 0, canvas.width, canvas.height);
+context.fill();
+
+context.lineJoin = "round";
+context.lineWidth = 60;
+context.strokeStyle = 'blue';
+context.fillStyle = 'burlywood';
+
+context.strokeRect(75, 100, 130, 180);
+context.fillRect(250, 140, 160, 100);
+context.lineWidth = 20;
+context.strokeStyle = 'gold';
+context.strokeRect(450, 70, 60, 180);
+//context.fillStyle = '#40e0d0';
+context.fillStyle = 'hsla(174,82%,33%,0.6)';
+context.fillRect(490, 180, 80, 190);
+context.font = "25pt Palatino Linotype";
+context.fillStyle = 'red';
+		context.fillText("abcdefghijklmnopqrstuvwxyz", 20, 30);
+		context.fillText("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 20, 60);
+		context.fillText("1234567890~!@#$%^&*()_+-={}|\/<>;:[]", 20, 90)
+		context.font = "25pt Arial";
+		context.fillText("abcdefghijklmnopqrstuvwxyz", 20, 30);
+		context.fillText("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 20, 60);
+		context.fillText("1234567890~!@#$%^&*()_+-={}|\/<>;:[]", 20, 90)
+context.font = "18pt Palatino Linotype";
+context.fillText("\ud83d\ude03\uD83D\uDE02\uD83D\uDE05\uD83D\uDE0A\uD83D\uDE43\uD83D\uDE09\uD83D\uDE12\uD83D\uDE33\uD83E\uDD14\uD83D\uDC2D\uD83D\uDC22\uD83E\uDD82\uD83E\uDD8F\uD83C\uDF33\uD83C\uDF32\uD83E\uDD11\uD83D\uDC6A\uD83D\uDE2E\uD83D\uDE2F\uD83D\uDE02\uD83D\uDE3B", 20, 60);
+		
+
+//document.body.appendChild(canvas);
+
+var dataURL = canvas.toDataURL("image/png").substr("data:image/png;base64,".length);
+document.getElementById("DataURL20").value = "" + dataURL;
+document.getElementById("Hash20").value = "" + dataURL.hashCode();  
+</script>
+<!--End of Canvas 20-->   
