@@ -1,0 +1,15 @@
+<!--Canvas 18-->
+<script type="text/javascript">
+var canvas = document.createElement("canvas"),
+context = canvas.getContext("2d");
+canvas.height = 400;
+canvas.width = 700;
+
+context.font = "18pt Arial";
+context.fillText("\ud83d\ude03\uD83D\uDE02\uD83D\uDE05\uD83D\uDE0A\uD83D\uDE43\uD83D\uDE09\uD83D\uDE12\uD83D\uDE33\uD83E\uDD14\uD83D\uDC2D\uD83D\uDC22\uD83E\uDD82\uD83E\uDD8F\uD83C\uDF33\uD83C\uDF32\uD83E\uDD11\uD83D\uDC6A\uD83D\uDE2E\uD83D\uDE2F\uD83D\uDE02\uD83D\uDE3B", 20, 40);
+//document.body.appendChild(canvas);
+var dataURL = canvas.toDataURL("image/png").substr("data:image/png;base64,".length);
+document.getElementById("DataURL18").value = "" + dataURL;
+document.getElementById("Hash18").value = "" + dataURL.hashCode();
+</script>  
+<!--End of Canvas 18--> 
