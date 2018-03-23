@@ -1,0 +1,18 @@
+<!--Canvas 23-->
+<img id="myImage" src="Pix/myImage.jpg" alt="Nature" width="220" height="277">
+<canvas id="myCanvas" width="700" height="700"></canvas>
+
+<script>
+document.getElementById("myImage").style.display = "none";
+document.getElementById("myCanvas").style.display = "none";
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("myImage");
+    ctx.drawImage(img,10,10);
+
+document.body.appendChild(c);
+var dataURL = canvas.toDataURL("image/png").substr("data:image/png;base64,".length);
+document.getElementById("DataURL23").value = "" + dataURL;
+document.getElementById("Hash23").value = "" + dataURL.hashCode();
+</script>
+<!--End of Canvas 23--> 
