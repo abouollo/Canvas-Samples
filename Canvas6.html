@@ -1,0 +1,26 @@
+<!--Canvas 6-->
+<script type="text/javascript">
+
+var canvas = document.createElement('canvas'),
+context = canvas.getContext('2d'),
+gradient = context.createRadialGradient(700/2, 400, 10,700/2, 0, 100);
+canvas.height = 400;
+canvas.width = 700;
+
+gradient.addColorStop(0,Â Â Â Â '#b0d5ff');
+gradient.addColorStop(0.25, '#6d22b5');
+gradient.addColorStop(0.5,Â Â '#676ba5');
+gradient.addColorStop(0.7, '#a9eeab');
+gradient.addColorStop(1,Â Â Â Â '#a38875');
+
+context.fillStyle = gradient;
+context.rect(0, 0, canvas.width, canvas.height);
+context.fill();
+//document.body.appendChild(canvas);
+
+var dataURL = canvas.toDataURL("image/png").substr("data:image/png;base64,".length);
+document.getElementById("DataURL6").value = "" + dataURL;
+document.getElementById("Hash6").value = "" + dataURL.hashCode();
+
+</script>  
+<!--End of Canvas 6--> 
